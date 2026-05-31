@@ -379,7 +379,7 @@
             <button class="nav-btn" onclick="switchPage('cases', this)">Case Studies</button>
             <button class="nav-btn" onclick="switchPage('hire', this)">Get in Touch</button>
         </div>
-        <a href="https://drive.google.com/file/d/113g9ylsjLOBRdQGz0hKjVxwvuRZalSJT/view?usp=sharing" class="cv-download-btn">Download CV</a>
+        <a href="https://drive.google.com/file/d/113g9ylsjLOBRdQGz0hKjVxwvuRZalSJT/view?usp=sharing" target="_blank" class="cv-download-btn">Download CV</a>
     </nav>
 
     <!-- PAGE 1: HOME SUBPAGE -->
@@ -411,7 +411,7 @@
         <div class="metrics-section">
             <div class="metrics-grid" style="grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 20px; margin-top: 50px;">
                 
-                <!-- CARD 1: AUTHORITY ANCHOR (MOVED TO FIRST) -->
+                <!-- CARD 1: AUTHORITY ANCHOR -->
                 <div class="floating-dashboard" style="padding: 25px; border-left: 3px solid var(--accent-glow);">
                     <div class="dash-num" style="font-size: 2.2rem; color: var(--accent-glow);">8+ <span style="font-size: 0.75rem; background: rgba(56,189,248,0.1); color: var(--accent-glow);">Leadership</span></div>
                     <div class="dash-label" style="font-size: 0.85rem; margin-top: 8px;">Years of people operations mastery leading cross-functional teams, solo departments, and crisis frameworks.</div>
@@ -441,14 +441,14 @@
                     <div class="dash-label" style="font-size: 0.85rem; margin-top: 8px;">Rapid talent footprint infrastructure scaling, expanding a startup core from 7 to 30 teams within 60 days.</div>
                 </div>
 
-            </div> <!-- Closes metrics-grid -->
-        </div> <!-- Closes metrics-section -->
+            </div>
+        </div>
+    </div>
 
     <!-- PAGE 2: ABOUT / STORY / CERTIFICATIONS / AWARDS -->
     <div id="about" class="page-content">
         <h2 style="font-size: 2.5rem; font-weight: 800; margin-bottom: 25px;">My Story: The Nonlinear Path to People Leadership</h2>
         
-        <!-- NEW INTERACTIVE VISUAL TIMELINE -->
         <div style="position: relative; max-width: 1000px; margin: 40px auto; padding: 20px 0;">
             
             <!-- CHAPTER 1 -->
@@ -542,40 +542,43 @@
                 <span style="background: var(--bg-card); border: 1px solid rgba(255,255,255,0.08); padding: 8px 16px; border-radius: 30px; font-size: 0.9rem; color: var(--text-primary);">✈️ Cross-Cultural Traveling</span>
             </div>
         </div>
-        <!-- EXPERT TRACK: CERTIFICATIONS -->
-        <h2 style="font-size: 2rem; font-weight: 800; margin-bottom: 10px;">The Kaizen Engine: Continuous Learning Track</h2>
-        <p style="color: var(--text-secondary); margin-bottom: 30px;">I approach human resource management through the framework of Kaizen—continuous, structured personal expansion to stay ahead of market mechanics.</p>
-        
-        <div class="grid-cards">
-            <div class="impact-card" style="border-top: 3px solid var(--accent-glow);">
-                <span class="time-meta" style="font-size: 0.8rem;">Executive Credential</span>
-                <h4 style="margin: 5px 0; color: white; font-size: 1.15rem;">HR Management & Analytics</h4>
-                <p style="margin: 0; font-size: 0.9rem; font-weight: 600;">IIM Kozhikode</p>
-            </div>
-            <div class="impact-card" style="border-top: 3px solid var(--accent-purple);">
-                <span class="time-meta" style="font-size: 0.8rem;">University of Pennsylvania</span>
-                <h4 style="margin: 5px 0; color: white; font-size: 1.15rem;">People Analytics Model</h4>
-                <p style="margin: 0; font-size: 0.9rem; font-weight: 600;">Coursera</p>
-            </div>
-            <div class="impact-card" style="border-top: 3px solid var(--accent-glow);">
-                <span class="time-meta" style="font-size: 0.8rem;">KPMG Leadership Track</span>
-                <h4 style="margin: 5px 0; color: white; font-size: 1.15rem;">Future L&D Leader Program</h4>
-                <p style="margin: 0; font-size: 0.9rem; font-weight: 600;">KPMG Executive Academy</p>
-            </div>
-            <div class="impact-card" style="border-top: 3px solid var(--accent-purple);">
-                <span class="time-meta" style="font-size: 0.8rem;">Jombay Elite Initiative</span>
-                <h4 style="margin: 5px 0; color: white; font-size: 1.15rem;">HR 30 under 30 Young Leader</h4>
-                <p style="margin: 0; font-size: 0.9rem; font-weight: 600;">Jombay Cohort</p>
-            </div>
-            <div class="impact-card" style="border-top: 3px solid var(--accent-glow);">
-                <span class="time-meta" style="font-size: 0.8rem;">Compliance & Safety</span>
-                <h4 style="margin: 5px 0; color: white; font-size: 1.15rem;">PoSH — Train the Trainer</h4>
-                <p style="margin: 0; font-size: 0.9rem; font-weight: 600;">CHRMP Certified</p>
-            </div>
-            <div class="impact-card" style="border-top: 3px solid var(--accent-purple);">
-                <span class="time-meta" style="font-size: 0.8rem;">Systems Frameworks</span>
-                <h4 style="margin: 5px 0; color: white; font-size: 1.15rem;">Workday Basics & HRBP Track</h4>
-                <p style="margin: 0; font-size: 0.9rem; font-weight: 600;">Coursera / LinkedIn Learning</p>
+
+        <div style="margin-top: 70px;">
+            <!-- EXPERT TRACK: CERTIFICATIONS -->
+            <h2 style="font-size: 2rem; font-weight: 800; margin-bottom: 10px;">The Kaizen Engine: Continuous Learning Track</h2>
+            <p style="color: var(--text-secondary); margin-bottom: 30px;">I approach human resource management through the framework of Kaizen—continuous, structured personal expansion to stay ahead of market mechanics.</p>
+            
+            <div class="grid-cards">
+                <div class="impact-card" style="border-top: 3px solid var(--accent-glow);">
+                    <span class="time-meta" style="font-size: 0.8rem;">Executive Credential</span>
+                    <h4 style="margin: 5px 0; color: white; font-size: 1.15rem;">HR Management & Analytics</h4>
+                    <p style="margin: 0; font-size: 0.9rem; font-weight: 600;">IIM Kozhikode</p>
+                </div>
+                <div class="impact-card" style="border-top: 3px solid var(--accent-purple);">
+                    <span class="time-meta" style="font-size: 0.8rem;">University of Pennsylvania</span>
+                    <h4 style="margin: 5px 0; color: white; font-size: 1.15rem;">People Analytics Model</h4>
+                    <p style="margin: 0; font-size: 0.9rem; font-weight: 600;">Coursera</p>
+                </div>
+                <div class="impact-card" style="border-top: 3px solid var(--accent-glow);">
+                    <span class="time-meta" style="font-size: 0.8rem;">KPMG Leadership Track</span>
+                    <h4 style="margin: 5px 0; color: white; font-size: 1.15rem;">Future L&D Leader Program</h4>
+                    <p style="margin: 0; font-size: 0.9rem; font-weight: 600;">KPMG Executive Academy</p>
+                </div>
+                <div class="impact-card" style="border-top: 3px solid var(--accent-purple);">
+                    <span class="time-meta" style="font-size: 0.8rem;">Jombay Elite Initiative</span>
+                    <h4 style="margin: 5px 0; color: white; font-size: 1.15rem;">HR 30 under 30 Young Leader</h4>
+                    <p style="margin: 0; font-size: 0.9rem; font-weight: 600;">Jombay Cohort</p>
+                </div>
+                <div class="impact-card" style="border-top: 3px solid var(--accent-glow);">
+                    <span class="time-meta" style="font-size: 0.8rem;">Compliance & Safety</span>
+                    <h4 style="margin: 5px 0; color: white; font-size: 1.15rem;">PoSH — Train the Trainer</h4>
+                    <p style="margin: 0; font-size: 0.9rem; font-weight: 600;">CHRMP Certified</p>
+                </div>
+                <div class="impact-card" style="border-top: 3px solid var(--accent-purple);">
+                    <span class="time-meta" style="font-size: 0.8rem;">Systems Frameworks</span>
+                    <h4 style="margin: 5px 0; color: white; font-size: 1.15rem;">Workday Basics & HRBP Track</h4>
+                    <p style="margin: 0; font-size: 0.9rem; font-weight: 600;">Coursera / LinkedIn Learning</p>
+                </div>
             </div>
         </div>
 
@@ -640,66 +643,76 @@
             <p style="color: var(--text-secondary); line-height: 1.7; font-size: 1.05rem;">
                 <strong>The Challenge:</strong> Combating cultural fragmentation and burnout risks across international technological hubs and highly distributed engineering branches.<br><br>
                 <strong>The Strategy:</strong> Iterated comprehensive OKR frameworks and launched 38 customized employee experience modules specifically engineered for cross-border alignment.<br><br>
-                <strong>The Impact:</strong> Successfully protected talent retention by sustaining a consistent 95% engineer happiness track rating and an elite 4.8/5 evaluation index.
-            </p>
-        </div>
-
-        <div class="timeline-item">
-            <div class="time-meta">boodmo.com // Case Study</div>
-            <h3 style="margin: 5px 0 15px 0; color: white; font-size: 1.6rem;">From 35 to 82: Re-Engineering Talent Architecture to Skyrocket eNPS</h3>
-            <p style="color: var(--text-secondary); line-height: 1.7; font-size: 1.05rem;">
-                <strong>The Challenge:</strong> Stagnating organizational sentiment (initial eNPS base of 35) and unstructured talent benchmarks hindering growth velocity.<br><br>
-                <strong>The Strategy:</strong> Audited and re-mapped talent acquisition benchmarking parameters while deploying a custom, data-backed rewards and recognition framework across a cross-functional people operations structure.<br><br>
-                <strong>The Impact:</strong> Engineered a massive culture turnaround, driving eNPS score up to an unprecedented 82 while simultaneously lifting the overall Quality of Hire index by 98%.
+                <strong>The Impact:</strong> Successfully protected talent retention by sustaining a consistent 95% engineer happiness metric across scaling ecosystems.
             </p>
         </div>
     </div>
 
-    <!-- PAGE 4: HIRE / CONTACT -->
+    <!-- PAGE 4: GET IN TOUCH -->
     <div id="hire" class="page-content">
         <h2 style="font-size: 2.5rem; font-weight: 800; margin-bottom: 10px;">Get in Touch</h2>
-        <p style="color: var(--text-secondary); font-size: 1.1rem; margin-bottom: 40px;">Let’s discuss how my background in data-driven talent architecture and engineering culture turnaround can support your organizational growth benchmarks.</p>
+        <p style="color: var(--text-secondary); margin-bottom: 40px; font-size: 1.1rem;">Let's discuss strategic people infrastructure, leadership advisory, or transformative HR ecosystems.</p>
         
         <div class="contact-grid">
             <div>
-                <form action="#" method="POST">
+                <form action="https://formspree.io/f/xanykgbe" method="POST">
                     <div class="form-group">
-                        <label>Your Name / Company</label>
-                        <input type="text" required placeholder="e.g., Enterprise Inc.">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" name="name" required placeholder="John Doe">
                     </div>
                     <div class="form-group">
-                        <label>Corporate Email Address</label>
-                        <input type="email" required placeholder="name@company.com">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" required placeholder="john@company.com">
                     </div>
                     <div class="form-group">
-                        <label>Message / Role Overview</label>
-                        <textarea rows="6" required placeholder="Briefly outline the role requirements, strategic talent initiatives, or team scaling goals you are looking to solve..."></textarea>
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="6" required placeholder="Let's collaborate on..."></textarea>
                     </div>
-                    <button type="submit" class="cv-download-btn" style="border: none; padding: 16px 35px; cursor: pointer;">Submit Message</button>
+                    <button type="submit" class="cv-download-btn" style="border: none; cursor: pointer; padding: 14px 35px;">Send Message</button>
                 </form>
             </div>
-            <div style="background: var(--bg-card); padding: 45px; border-radius: 24px; border: 1px solid rgba(255,255,255,0.05); height: fit-content;">
-                <h3 style="margin-top: 0; font-size: 1.4rem;">Target Opportunities</h3>
-                <p style="color: var(--text-secondary); margin-bottom: 35px; line-height: 1.6;">Open to HR Manager, Senior HRBP, or People Operations Leadership roles within high-growth tech ecosystems, global capability centers (GCCs), or progressive corporate enterprises.</p>
-                <p style="margin-bottom: 15px;">📍 <strong>Location:</strong> Bengaluru, India (Open to Hybrid / Remote)</p>
-                <p style="margin-bottom: 15px;">📧 <strong>Email:</strong> contactskalpana01@gmail.com</p>
-                <p style="margin-bottom: 0;">📞 <strong>Network:</strong> +91 9315399773</p>
+            
+            <div style="background: var(--bg-card); padding: 40px; border-radius: 24px; border: 1px solid rgba(255,255,255,0.05); display: flex; flex-direction: column; justify-content: center; gap: 30px;">
+                <div>
+                    <h4 style="margin: 0 0 5px 0; color: white; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 1px; color: var(--accent-glow);">Current Location</h4>
+                    <p style="margin: 0; font-size: 1.1rem; font-weight: 600;">Bengaluru, Karnataka, India</p>
+                </div>
+                <div>
+                    <h4 style="margin: 0 0 5px 0; color: white; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 1px; color: var(--accent-glow);">Professional Networks</h4>
+                    <p style="margin: 10px 0 0 0;">
+                        <a href="https://www.linkedin.com/in/kalpana-sharma-hr" target="_blank" class="btn-secondary" style="padding: 8px 20px; font-size: 0.8rem;">LinkedIn Profile</a>
+                    </p>
+                </div>
             </div>
         </div>
     </div>
 
+    <!-- CORE INTERACTIVE ROUTING JAVASCRIPT -->
     <script>
-        function switchPage(pageId, element) {
+        function switchPage(pageId, buttonElement) {
+            // Hide all subpages
             const pages = document.querySelectorAll('.page-content');
             pages.forEach(page => page.classList.remove('active'));
             
+            // Remove active style from all navigation buttons
             const buttons = document.querySelectorAll('.nav-btn');
             buttons.forEach(btn => btn.classList.remove('active'));
             
-            document.getElementById(pageId).classList.add('active');
-            element.classList.add('active');
-            window.scrollTo(0, 0);
+            // Activate target subpage
+            const targetPage = document.getElementById(pageId);
+            if (targetPage) {
+                targetPage.classList.add('active');
+            }
+            
+            // Mark button as active
+            if (buttonElement) {
+                buttonElement.classList.add('active');
+            }
+            
+            // Smooth view snap
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         }
     </script>
+
 </body>
 </html>
