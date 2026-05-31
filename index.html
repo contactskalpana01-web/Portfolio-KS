@@ -24,7 +24,6 @@
             overflow-x: hidden;
         }
 
-        /* Dribbble Style Navigation */
         .nav-container {
             display: flex;
             justify-content: space-between;
@@ -94,7 +93,6 @@
             display: inline-block;
         }
 
-        /* Viewport Dynamic Frame */
         .page-content {
             display: none;
             max-width: 1200px;
@@ -112,7 +110,6 @@
             to { opacity: 1; transform: translateY(0); }
         }
 
-        /* PAGE 1: HERO HOME DESIGN */
         .hero-split {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -142,7 +139,6 @@
             margin-bottom: 35px;
         }
 
-        /* Profile Image Container */
         .profile-img-box {
             width: 100%;
             max-width: 380px;
@@ -150,7 +146,7 @@
             border-radius: 24px;
             overflow: hidden;
             border: 2px solid rgba(255, 255, 255, 0.1);
-            background: #1E293B; /* Placeholder color until you drop your image */
+            background: #1E293B;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -164,7 +160,6 @@
             object-fit: cover;
         }
 
-        /* Dribbble Floating Dashboard Cards (Metrics) */
         .metrics-section {
             margin-top: 70px;
         }
@@ -213,7 +208,6 @@
             line-height: 1.5;
         }
 
-        /* Grid Layouts for Internal Subpages */
         .grid-cards {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -251,7 +245,6 @@
             line-height: 1.5;
         }
 
-        /* Timeline Design */
         .timeline-item {
             border-left: 2px solid rgba(255,255,255,0.1);
             padding-left: 30px;
@@ -283,7 +276,6 @@
             letter-spacing: 1px;
         }
 
-        /* Form / Contact Input styles */
         .contact-grid {
             display: grid;
             grid-template-columns: 1.1fr 0.9fr;
@@ -361,7 +353,6 @@
 </head>
 <body>
 
-    <!-- Navigation Framework -->
     <nav class="nav-container">
         <div class="logo">KS // PORTFOLIO</div>
         <div class="nav-links">
@@ -370,53 +361,49 @@
             <button class="nav-btn" onclick="switchPage('cases', this)">Case Studies</button>
             <button class="nav-btn" onclick="switchPage('hire', this)">Hire Me</button>
         </div>
-        <!-- Replace '#' with your actual Google Drive link later -->
-        <a href="#" class="cv-download-btn" id="cvLink1">Download CV</a>
+        <a href="https://drive.google.com/file/d/113g9ylsjLOBRdQGz0hKjVxwvuRZalSJT/view?usp=sharing" class="cv-download-btn" id="cvLink1">Download CV</a>
     </nav>
 
-    <!-- PAGE 1: HOME SUBPAGE -->
     <div id="home" class="page-content active">
         <div class="hero-split">
             <div class="hero-left">
                 <h1>Transforming Businesses By Empowering <span>People</span>.</h1>
-                <p>Strategic HR leader and global advisor with 8+ years of cross-functional experience across the US, UK, Europe, and APAC regions. Designing data-driven people strategies that scale alongside modern hyper-growth ecosystems[cite: 1].</p>
+                <p>Strategic HR leader and global advisor with 8+ years of cross-functional experience across the US, UK, Europe, and APAC regions. Designing data-driven people strategies that scale alongside modern hyper-growth ecosystems.</p>
                 <div class="action-buttons">
                     <button class="cv-download-btn" style="border:none; padding:14px 32px;" onclick="document.querySelectorAll('.nav-btn')[3].click()">Let's Connect</button>
-                    <a href="#" class="btn-secondary" id="cvLink2">View CV</a>
+                    <a href="https://drive.google.com/file/d/113g9ylsjLOBRdQGz0hKjVxwvuRZalSJT/view?usp=sharing" class="btn-secondary" id="cvLink2">View CV</a>
                 </div>
             </div>
             <div class="hero-right">
                 <div class="profile-img-box">
-                    <!-- Paste your profile photo image link inside the src attribute below when ready -->
-                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=600" alt="Kalpana Sharma">
+                    <!-- PASTE YOUR DIRECT IMAGE URL ENDING IN .jpg OR .png BELOW IN THE src ATTR -->
+                    <img src="https://drive.google.com/file/d/1vKAyRoDan2F3oiKUWZ1l7SVlpJ7h7J6K/view?usp=sharing" alt="Kalpana Sharma">
                 </div>
             </div>
         </div>
 
-        <!-- Metric Dashboard Layer -->
         <div class="metrics-section">
             <div class="metrics-grid">
                 <div class="floating-dashboard">
-                    <div class="dash-num">82 <span>▲ High Growth</span></div>[cite: 1]
-                    <div class="dash-label">eNPS Score Achieved at boodmo.com, engineered from an initial base of 35[cite: 1].</div>
+                    <div class="dash-num">82 <span>▲ High Growth</span></div>
+                    <div class="dash-label">eNPS Score Achieved at boodmo.com, engineered from an initial base of 35.</div>
                 </div>
                 <div class="floating-dashboard">
-                    <div class="dash-num">95% <span>Sustained</span></div>[cite: 1]
-                    <div class="dash-label">Distributed engineering team happiness index managed globally at The Scalers[cite: 1].</div>
+                    <div class="dash-num">95% <span>Sustained</span></div>
+                    <div class="dash-label">Distributed engineering team happiness index managed globally at The Scalers.</div>
                 </div>
                 <div class="floating-dashboard">
-                    <div class="dash-num">98% <span>Optimized</span></div>[cite: 1]
-                    <div class="dash-label">Structural scale optimization and execution tracking lifting overall Quality of Hire[cite: 1].</div>
+                    <div class="dash-num">98% <span>Optimized</span></div>
+                    <div class="dash-label">Structural scale optimization and execution tracking lifting overall Quality of Hire.</div>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- PAGE 2: ABOUT ME SUBPAGE -->
     <div id="about" class="page-content">
         <h2 style="font-size: 2.5rem; font-weight: 800; margin-bottom: 10px;">About Me & Philosophy</h2>
         <p style="color: var(--text-secondary); max-width: 850px; font-size: 1.15rem; line-height: 1.8; margin-bottom: 40px;">
-            I believe that business growth and intentional employee advocacy do not have to be mutually exclusive[cite: 1]. Over the past 8+ years, I have advised executives globally on aligning performance deliverables, designing agile succession blueprints, and building distributed workplace frameworks[cite: 1]. I am currently deepening my predictive modeling tools within the **HR Analytics certification track at IIM Kozhikode**[cite: 1].
+            I believe that business growth and intentional employee advocacy do not have to be mutually exclusive. Over the past 8+ years, I have advised executives globally on aligning performance deliverables, designing agile succession blueprints, and building distributed workplace frameworks. I am currently deepening my predictive modeling tools within the HR Analytics certification track at IIM Kozhikode.
         </p>
         
         <h2>Core Pillars & Competencies</h2>
@@ -424,55 +411,52 @@
             <div class="impact-card">
                 <h3>Strategic HRBP Advisory</h3>
                 <ul>
-                    <li>Distributed Workforce Frameworks (US, UK, Europe, APAC)[cite: 1]</li>
-                    <li>Restructuring & Agile Organizational Design[cite: 1]</li>
-                    <li>C-Suite Advisory & Cross-Border Stakeholder Governance[cite: 1]</li>
+                    <li>Distributed Workforce Frameworks (US, UK, Europe, APAC)</li>
+                    <li>Restructuring & Agile Organizational Design</li>
+                    <li>C-Suite Advisory & Cross-Border Stakeholder Governance</li>
                 </ul>
             </div>
             <div class="impact-card">
                 <h3>Talent Architecture</h3>
                 <ul>
-                    <li>Balanced Scorecard & OKR Strategy Mapping[cite: 1]</li>
-                    <li>9-Box Review Calibration & HIPO Talent Pipelines[cite: 1]</li>
-                    <li>Continuous Learning Modules & Upskilling Paths[cite: 1]</li>
+                    <li>Balanced Scorecard & OKR Strategy Mapping</li>
+                    <li>9-Box Review Calibration & HIPO Talent Pipelines</li>
+                    <li>Continuous Learning Modules & Upskilling Paths</li>
                 </ul>
             </div>
             <div class="impact-card">
                 <h3>People Operations</h3>
                 <ul>
-                    <li>Predictive People Dashboards & HR Analytics[cite: 1]</li>
-                    <li>SOP Design & HR Lifecycle Automation[cite: 1]</li>
-                    <li>Global Compliance, Audits & Payroll Mechanics[cite: 1]</li>
+                    <li>Predictive People Dashboards & HR Analytics</li>
+                    <li>SOP Design & HR Lifecycle Automation</li>
+                    <li>Global Compliance, Audits & Payroll Mechanics</li>
                 </ul>
             </div>
         </div>
     </div>
 
-    <!-- PAGE 3: CASE STUDIES SUBPAGE -->
     <div id="cases" class="page-content">
         <h2 style="font-size: 2.5rem; font-weight: 800; margin-bottom: 30px;">Professional Impact Portfolio</h2>
         
         <div class="timeline-item">
-            <div class="time-meta">Oct 2024 – Present</div>[cite: 1]
-            <h3 style="margin: 5px 0 15px 0; color: white; font-size: 1.5rem;">Senior HRBP & Chief Happiness Officer — The Scalers</h3>[cite: 1]
-            <p style="color: var(--text-secondary); line-height: 1.7; font-size: 1.05rem;">Serve as the principal HR advisor across distributed technological engineering branches spanning multiple international hubs[cite: 1]. Managed calibrated OKR iterations, launched 38+ comprehensive employee experience modules, and maintained an overall **95% engineer track happiness rating** with a 4.8/5 evaluation index[cite: 1].</p>
+            <div class="time-meta">Oct 2024 – Present</div>
+            <h3 style="margin: 5px 0 15px 0; color: white; font-size: 1.5rem;">Senior HRBP & Chief Happiness Officer — The Scalers</h3>
+            <p style="color: var(--text-secondary); line-height: 1.7; font-size: 1.05rem;">Serve as the principal HR advisor across distributed technological engineering branches spanning multiple international hubs. Managed calibrated OKR iterations, launched 38+ comprehensive employee experience modules, and maintained an overall 95% engineer track happiness rating with a 4.8/5 evaluation index.</p>
         </div>
 
         <div class="timeline-item">
-            <div class="time-meta">Dec 2021 – Jun 2024</div>[cite: 1]
-            <h3 style="margin: 5px 0 15px 0; color: white; font-size: 1.5rem;">Assistant Manager HR — boodmo.com</h3>[cite: 1]
-            <p style="color: var(--text-secondary); line-height: 1.7; font-size: 1.05rem;">Directed a cross-functional people operations team of 5 reporting immediately to the Chief People & Operating Officer[cite: 1]. Re-engineered the group's talent acquisition benchmarking parameters and introduced custom rewards frameworks that **skyrocketed organizational eNPS from 35 to 82** while increasing the Quality of Hire score by 98%[cite: 1].</p>
+            <div class="time-meta">Dec 2021 – Jun 2024</div>
+            <h3 style="margin: 5px 0 15px 0; color: white; font-size: 1.5rem;">Assistant Manager HR — boodmo.com</h3>
+            <p style="color: var(--text-secondary); line-height: 1.7; font-size: 1.05rem;">Directed a cross-functional people operations team of 5 reporting immediately to the Chief People & Operating Officer. Re-engineered the group's talent acquisition benchmarking parameters and introduced custom rewards frameworks that skyrocketed organizational eNPS from 35 to 82 while increasing the Quality of Hire score by 98%.</p>
         </div>
     </div>
 
-    <!-- PAGE 4: HIRE ME SUBPAGE -->
     <div id="hire" class="page-content">
         <h2 style="font-size: 2.5rem; font-weight: 800; margin-bottom: 10px;">Initiate a Consultation</h2>
         <p style="color: var(--text-secondary); font-size: 1.1rem; margin-bottom: 40px;">Ready to elevate your people operations strategy? Let's discuss your organization's goals.</p>
         
         <div class="contact-grid">
             <div>
-                <!-- You can integrate this form with Formspree.io for free to receive emails directly -->
                 <form action="#" method="POST">
                     <div class="form-group">
                         <label>Your Name / Enterprise</label>
@@ -492,15 +476,14 @@
             <div style="background: var(--bg-card); padding: 45px; border-radius: 24px; border: 1px solid rgba(255,255,255,0.05); height: fit-content;">
                 <h3 style="margin-top: 0; font-size: 1.4rem;">Direct Channels</h3>
                 <p style="color: var(--text-secondary); margin-bottom: 35px; line-height: 1.6;">Available for executive partnerships, international transformation leadership roles, and remote organizational scaling advisories.</p>
-                <p style="margin-bottom: 15px;">📍 <strong>Base:</strong> Bengaluru, India[cite: 1]</p>
-                <p style="margin-bottom: 15px;">📧 <strong>Inquiries:</strong> contactskalpana01@gmail.com[cite: 1]</p>
-                <p style="margin-bottom: 0;">📞 <strong>Network:</strong> +91 9315399773[cite: 1]</p>
+                <p style="margin-bottom: 15px;">📍 <strong>Base:</strong> Bengaluru, India</p>
+                <p style="margin-bottom: 15px;">📧 <strong>Inquiries:</strong> contactskalpana01@gmail.com</p>
+                <p style="margin-bottom: 0;">📞 <strong>Network:</strong> +91 9315399773</p>
             </div>
         </div>
     </div>
 
     <script>
-        // Multi-page Tab System
         function switchPage(pageId, element) {
             const pages = document.querySelectorAll('.page-content');
             pages.forEach(page => page.classList.remove('active'));
@@ -512,12 +495,6 @@
             element.classList.add('active');
             window.scrollTo(0, 0);
         }
-
-        // Configuration: Paste your specific CV link here
-        const cvLink = "https://drive.google.com/file/d/113g9ylsjLOBRdQGz0hKjVxwvuRZalSJT/view?usp=sharing";
-        
-        document.getElementById('cvLink1').href = cvLink;
-        document.getElementById('cvLink2').href = cvLink;
     </script>
 </body>
 </html>
