@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kalpana Sharma | HR Portfolio</title>
+    <title>Kalpana Sharma | Senior HR Leader</title>
     <style>
         :root {
             --bg-main: #0B0F19;
@@ -13,6 +13,7 @@
             --text-primary: #F3F4F6;
             --text-secondary: #9CA3AF;
             --white: #FFFFFF;
+            --gold: #F59E0B;
         }
 
         body {
@@ -150,7 +151,6 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            color: var(--text-secondary);
             box-shadow: 0 20px 40px rgba(0,0,0,0.3);
         }
 
@@ -160,14 +160,11 @@
             object-fit: cover;
         }
 
-        .metrics-section {
-            margin-top: 70px;
-        }
-
         .metrics-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 25px;
+            margin-top: 70px;
         }
 
         .floating-dashboard {
@@ -245,11 +242,37 @@
             line-height: 1.5;
         }
 
+        .story-container {
+            line-height: 1.8;
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            margin-bottom: 50px;
+        }
+
+        .story-container strong {
+            color: var(--white);
+        }
+
+        .award-badge {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            background: rgba(255,255,255,0.02);
+            padding: 20px;
+            border-radius: 12px;
+            border: 1px solid rgba(245, 158, 11, 0.1);
+        }
+
+        .award-icon {
+            font-size: 1.5rem;
+            color: var(--gold);
+        }
+
         .timeline-item {
             border-left: 2px solid rgba(255,255,255,0.1);
             padding-left: 30px;
             position: relative;
-            margin-bottom: 50px;
+            margin-bottom: 45px;
             background: var(--bg-card);
             padding: 30px;
             border-radius: 0 16px 16px 0;
@@ -307,11 +330,6 @@
             font-size: 1rem;
         }
 
-        input:focus, textarea:focus {
-            outline: none;
-            border-color: var(--accent-glow);
-        }
-
         .action-buttons {
             display: flex;
             gap: 20px;
@@ -357,26 +375,26 @@
         <div class="logo">KS // PORTFOLIO</div>
         <div class="nav-links">
             <button class="nav-btn active" onclick="switchPage('home', this)">Home</button>
-            <button class="nav-btn" onclick="switchPage('about', this)">About Me</button>
+            <button class="nav-btn" onclick="switchPage('about', this)">My Story & Milestones</button>
             <button class="nav-btn" onclick="switchPage('cases', this)">Case Studies</button>
-            <button class="nav-btn" onclick="switchPage('hire', this)">Hire Me</button>
+            <button class="nav-btn" onclick="switchPage('hire', this)">Get in Touch</button>
         </div>
-        <a href="https://drive.google.com/file/d/113g9ylsjLOBRdQGz0hKjVxwvuRZalSJT/view?usp=sharing" class="cv-download-btn" id="cvLink1">Download CV</a>
+        <a href="https://drive.google.com/file/d/113g9ylsjLOBRdQGz0hKjVxwvuRZalSJT/view?usp=sharing" class="cv-download-btn">Download CV</a>
     </nav>
 
+    <!-- PAGE 1: HOME SUBPAGE -->
     <div id="home" class="page-content active">
         <div class="hero-split">
             <div class="hero-left">
                 <h1>Transforming Businesses By Empowering <span>People</span>.</h1>
-                <p>Strategic HR leader and global advisor with 8+ years of cross-functional experience across the US, UK, Europe, and APAC regions. Designing data-driven people strategies that scale alongside modern hyper-growth ecosystems.</p>
+                <p>Strategic HR Leader with 8+ years of experience leading cross-functional teams to explosive growth. Crafting modern, data-driven talent structures for progressive ecosystems and distributed corporate enterprises.</p>
                 <div class="action-buttons">
                     <button class="cv-download-btn" style="border:none; padding:14px 32px;" onclick="document.querySelectorAll('.nav-btn')[3].click()">Let's Connect</button>
-                    <a href="https://drive.google.com/file/d/113g9ylsjLOBRdQGz0hKjVxwvuRZalSJT/view?usp=sharing" class="btn-secondary" id="cvLink2">View CV</a>
+                    <button class="btn-secondary" onclick="document.querySelectorAll('.nav-btn')[1].click()">Read My Story</button>
                 </div>
             </div>
             <div class="hero-right">
                 <div class="profile-img-box">
-                    <!-- PASTE YOUR DIRECT IMAGE URL ENDING IN .jpg OR .png BELOW IN THE src ATTR -->
                     <img src="https://lh3.googleusercontent.com/d/1vKAyRoDan2F3oiKUWZ1l7SVlpJ7h7J6K" alt="Kalpana Sharma">
                 </div>
             </div>
@@ -400,75 +418,165 @@
         </div>
     </div>
 
+    <!-- PAGE 2: ABOUT / STORY / CERTIFICATIONS / AWARDS -->
     <div id="about" class="page-content">
-        <h2 style="font-size: 2.5rem; font-weight: 800; margin-bottom: 10px;">About Me & Philosophy</h2>
-        <p style="color: var(--text-secondary); max-width: 850px; font-size: 1.15rem; line-height: 1.8; margin-bottom: 40px;">
-            I believe that business growth and intentional employee advocacy do not have to be mutually exclusive. Over the past 8+ years, I have advised executives globally on aligning performance deliverables, designing agile succession blueprints, and building distributed workplace frameworks. I am currently deepening my predictive modeling tools within the HR Analytics certification track at IIM Kozhikode.
-        </p>
+        <h2 style="font-size: 2.5rem; font-weight: 800; margin-bottom: 25px;">My Story: The Nonlinear Path to People Leadership</h2>
         
-        <h2>Core Pillars & Competencies</h2>
+        <div class="story-container">
+            <p>
+                When I look back at my journey, it feels more like a roller coaster than a straight path—filled with unexpected turns, exhilarating highs, and moments of pure, high-octane excitement. If you had asked a younger version of me what I wanted to be, the answer would have been a scientist, astronaut, or doctor. Building HR ecosystems for global capability centers and hyper-growth enterprises? Not even on my radar.
+            </p>
+            <p>
+                <strong>The Multitasking Superpower:</strong> Born and brought up as a proud Delhiite, my primary native language was Hindi, but I was stubbornly determined to master English. My methodology? Total sensory immersion. I devoured books, analyzed movies, and meticulously imitated pronunciations. I became a pro at simultaneously listening, watching, analyzing context, and interpreting subtitles on the fly. Looking back, that was my earliest crash course in a vital human leadership trait: multi-layered situational processing.
+            </p>
+            <p>
+                <strong>From the Lab to the Boardroom:</strong> My entry into HR was wonderfully serendipitous. After an intensive sprint toward medical entrance exams, I pivoted into Biochemistry. By my third year, however, I realized that isolated laboratory benches couldn’t contain my energy—I needed human ecosystems. I leaped into business architecture and secured my MBA. 
+            </p>
+            <p>
+                In 2017, during an internship at <em>Nine dot Nine Mediaworx</em>, something clicked. I realized I had an innate knack for decoding human capital and structural talent mapping. Shortly after graduating, I took a trial-by-fire role at <em>Zashed Fashiontech</em>. As the standalone HR pillar, I built their entire human operations module from scratch, expanding the engineering and operational footprint from 7 to 30 people in just two months. That trial earned me my first corporate honor: the <strong>"Calm under Pressure"</strong> award.
+            </p>
+            <p>
+                <strong>The Evolution into a Strategic Manager:</strong> My trajectory has always been shaped by big challenges. At <em>OSIM India</em>, sudden structural turnover left me managing the complete corporate HR department completely solo within two months of joining. I handled everything—from core talent acquisition and regulatory compliance to employee engagement. When the pandemic hit, because we operated under essential medical services, I coordinated field safety, managed remote transitions, and kept personnel spirits high, earning a <strong>"Covid Warrior"</strong> distinction.
+            </p>
+            <p>
+                <strong>Making My Space in Tech:</strong> After establishing a powerful cultural track record in Delhi, I made a conscious, strategic move to **Bengaluru** to cement my footprint inside high-growth modern ecosystems. Today, with over 8 years of foundational people leadership experience, I align business objectives with real human development. I am an ambivert who balances analytical focus with human connection. When I am recharging, you can find me reading deeply, keeping pace with K-Dramas, enjoying live music concerts, attending standup comedy, or traveling.
+            </p>
+        </div>
+
+        <hr style="border: 0; border-top: 1px solid rgba(255,255,255,0.08); margin: 50px 0;">
+
+        <!-- EXPERT TRACK: CERTIFICATIONS -->
+        <h2 style="font-size: 2rem; font-weight: 800; margin-bottom: 10px;">The Kaizen Engine: Continuous Learning Track</h2>
+        <p style="color: var(--text-secondary); margin-bottom: 30px;">I approach human resource management through the framework of Kaizen—continuous, structured personal expansion to stay ahead of market mechanics.</p>
+        
         <div class="grid-cards">
-            <div class="impact-card">
-                <h3>Strategic HRBP Advisory</h3>
-                <ul>
-                    <li>Distributed Workforce Frameworks (US, UK, Europe, APAC)</li>
-                    <li>Restructuring & Agile Organizational Design</li>
-                    <li>C-Suite Advisory & Cross-Border Stakeholder Governance</li>
-                </ul>
+            <div class="impact-card" style="border-top: 3px solid var(--accent-glow);">
+                <span class="time-meta" style="font-size: 0.8rem;">Executive Credential</span>
+                <h4 style="margin: 5px 0; color: white; font-size: 1.15rem;">HR Management & Analytics</h4>
+                <p style="margin: 0; font-size: 0.9rem; font-weight: 600;">IIM Kozhikode</p>
             </div>
-            <div class="impact-card">
-                <h3>Talent Architecture</h3>
-                <ul>
-                    <li>Balanced Scorecard & OKR Strategy Mapping</li>
-                    <li>9-Box Review Calibration & HIPO Talent Pipelines</li>
-                    <li>Continuous Learning Modules & Upskilling Paths</li>
-                </ul>
+            <div class="impact-card" style="border-top: 3px solid var(--accent-purple);">
+                <span class="time-meta" style="font-size: 0.8rem;">University of Pennsylvania</span>
+                <h4 style="margin: 5px 0; color: white; font-size: 1.15rem;">People Analytics Model</h4>
+                <p style="margin: 0; font-size: 0.9rem; font-weight: 600;">Coursera</p>
             </div>
-            <div class="impact-card">
-                <h3>People Operations</h3>
-                <ul>
-                    <li>Predictive People Dashboards & HR Analytics</li>
-                    <li>SOP Design & HR Lifecycle Automation</li>
-                    <li>Global Compliance, Audits & Payroll Mechanics</li>
-                </ul>
+            <div class="impact-card" style="border-top: 3px solid var(--accent-glow);">
+                <span class="time-meta" style="font-size: 0.8rem;">KPMG Leadership Track</span>
+                <h4 style="margin: 5px 0; color: white; font-size: 1.15rem;">Future L&D Leader Program</h4>
+                <p style="margin: 0; font-size: 0.9rem; font-weight: 600;">KPMG Executive Academy</p>
+            </div>
+            <div class="impact-card" style="border-top: 3px solid var(--accent-purple);">
+                <span class="time-meta" style="font-size: 0.8rem;">Jombay Elite Initiative</span>
+                <h4 style="margin: 5px 0; color: white; font-size: 1.15rem;">HR 30 under 30 Young Leader</h4>
+                <p style="margin: 0; font-size: 0.9rem; font-weight: 600;">Jombay Cohort</p>
+            </div>
+            <div class="impact-card" style="border-top: 3px solid var(--accent-glow);">
+                <span class="time-meta" style="font-size: 0.8rem;">Compliance & Safety</span>
+                <h4 style="margin: 5px 0; color: white; font-size: 1.15rem;">PoSH — Train the Trainer</h4>
+                <p style="margin: 0; font-size: 0.9rem; font-weight: 600;">CHRMP Certified</p>
+            </div>
+            <div class="impact-card" style="border-top: 3px solid var(--accent-purple);">
+                <span class="time-meta" style="font-size: 0.8rem;">Systems Frameworks</span>
+                <h4 style="margin: 5px 0; color: white; font-size: 1.15rem;">Workday Basics & HRBP Track</h4>
+                <p style="margin: 0; font-size: 0.9rem; font-weight: 600;">Coursera / LinkedIn Learning</p>
+            </div>
+        </div>
+
+        <hr style="border: 0; border-top: 1px solid rgba(255,255,255,0.08); margin: 50px 0;">
+
+        <!-- EXPERT TRACK: AWARDS & INDUSTRY RECOGNITION -->
+        <h2 style="font-size: 2rem; font-weight: 800; margin-bottom: 25px;">Industry Recognition & Awards</h2>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 20px;">
+            <div class="award-badge">
+                <div class="award-icon">🏆</div>
+                <div>
+                    <h4 style="margin: 0; color: white; font-size: 1.1rem;">Women Achievers of the Year</h4>
+                    <p style="margin: 4px 0 0 0; font-size: 0.9rem; color: var(--text-secondary);">HR Association of India</p>
+                </div>
+            </div>
+            <div class="award-badge">
+                <div class="award-icon">🏆</div>
+                <div>
+                    <h4 style="margin: 0; color: white; font-size: 1.1rem;">Women in HR Excellence</h4>
+                    <p style="margin: 4px 0 0 0; font-size: 0.9rem; color: var(--text-secondary);">HRBP Summit & Awards</p>
+                </div>
+            </div>
+            <div class="award-badge">
+                <div class="award-icon">🏆</div>
+                <div>
+                    <h4 style="margin: 0; color: white; font-size: 1.1rem;">30Under30 Impactful HR Leader</h4>
+                    <p style="margin: 4px 0 0 0; font-size: 0.9rem; color: var(--text-secondary);">HR Association of India</p>
+                </div>
+            </div>
+            <div class="award-badge">
+                <div class="award-icon">⭐</div>
+                <div>
+                    <h4 style="margin: 0; color: white; font-size: 1.1rem;">Star Performer & Progressive Growth Star</h4>
+                    <p style="margin: 4px 0 0 0; font-size: 0.9rem; color: var(--text-secondary);">boodmo.com</p>
+                </div>
+            </div>
+            <div class="award-badge">
+                <div class="award-icon">🛡️</div>
+                <div>
+                    <h4 style="margin: 0; color: white; font-size: 1.1rem;">COVID WARRIOR Distinction</h4>
+                    <p style="margin: 4px 0 0 0; font-size: 0.9rem; color: var(--text-secondary);">OSIM India</p>
+                </div>
+            </div>
+            <div class="award-badge">
+                <div class="award-icon">⚓</div>
+                <div>
+                    <h4 style="margin: 0; color: white; font-size: 1.1rem;">Calm Under Pressure Award</h4>
+                    <p style="margin: 4px 0 0 0; font-size: 0.9rem; color: var(--text-secondary);">Zashed Fashiontech (P) Ltd.</p>
+                </div>
             </div>
         </div>
     </div>
 
+    <!-- PAGE 3: CASE STUDIES -->
     <div id="cases" class="page-content">
-        <h2 style="font-size: 2.5rem; font-weight: 800; margin-bottom: 30px;">Professional Impact Portfolio</h2>
+        <h2 style="font-size: 2.5rem; font-weight: 800; margin-bottom: 10px;">Strategic Case Studies</h2>
+        <p style="color: var(--text-secondary); margin-bottom: 40px; font-size: 1.1rem;">Deep dives into engineering culture turnaround and scalability mechanics.</p>
         
         <div class="timeline-item">
-            <div class="time-meta">Oct 2024 – Present</div>
-            <h3 style="margin: 5px 0 15px 0; color: white; font-size: 1.5rem;">Senior HRBP & Chief Happiness Officer — The Scalers</h3>
-            <p style="color: var(--text-secondary); line-height: 1.7; font-size: 1.05rem;">Serve as the principal HR advisor across distributed technological engineering branches spanning multiple international hubs. Managed calibrated OKR iterations, launched 38+ comprehensive employee experience modules, and maintained an overall 95% engineer track happiness rating with a 4.8/5 evaluation index.</p>
+            <div class="time-meta">The Scalers // Case Study</div>
+            <h3 style="margin: 5px 0 15px 0; color: white; font-size: 1.6rem;">Engineering a Distributed Culture Framework to Sustain a 95% Happiness Index</h3>
+            <p style="color: var(--text-secondary); line-height: 1.7; font-size: 1.05rem;">
+                <strong>The Challenge:</strong> Combating cultural fragmentation and burnout risks across international technological hubs and highly distributed engineering branches.<br><br>
+                <strong>The Strategy:</strong> Iterated comprehensive OKR frameworks and launched 38 customized employee experience modules specifically engineered for cross-border alignment.<br><br>
+                <strong>The Impact:</strong> Successfully protected talent retention by sustaining a consistent 95% engineer happiness track rating and an elite 4.8/5 evaluation index.
+            </p>
         </div>
 
         <div class="timeline-item">
-            <div class="time-meta">Dec 2021 – Jun 2024</div>
-            <h3 style="margin: 5px 0 15px 0; color: white; font-size: 1.5rem;">Assistant Manager HR — boodmo.com</h3>
-            <p style="color: var(--text-secondary); line-height: 1.7; font-size: 1.05rem;">Directed a cross-functional people operations team of 5 reporting immediately to the Chief People & Operating Officer. Re-engineered the group's talent acquisition benchmarking parameters and introduced custom rewards frameworks that skyrocketed organizational eNPS from 35 to 82 while increasing the Quality of Hire score by 98%.</p>
+            <div class="time-meta">boodmo.com // Case Study</div>
+            <h3 style="margin: 5px 0 15px 0; color: white; font-size: 1.6rem;">From 35 to 82: Re-Engineering Talent Architecture to Skyrocket eNPS</h3>
+            <p style="color: var(--text-secondary); line-height: 1.7; font-size: 1.05rem;">
+                <strong>The Challenge:</strong> Stagnating organizational sentiment (initial eNPS base of 35) and unstructured talent benchmarks hindering growth velocity.<br><br>
+                <strong>The Strategy:</strong> Audited and re-mapped talent acquisition benchmarking parameters while deploying a custom, data-backed rewards and recognition framework across a cross-functional people operations structure.<br><br>
+                <strong>The Impact:</strong> Engineered a massive culture turnaround, driving eNPS score up to an unprecedented 82 while simultaneously lifting the overall Quality of Hire index by 98%.
+            </p>
         </div>
     </div>
 
-    <<div id="hire" class="page-content">
+    <!-- PAGE 4: HIRE / CONTACT -->
+    <div id="hire" class="page-content">
         <h2 style="font-size: 2.5rem; font-weight: 800; margin-bottom: 10px;">Get in Touch</h2>
         <p style="color: var(--text-secondary); font-size: 1.1rem; margin-bottom: 40px;">Let’s discuss how my background in data-driven talent architecture and engineering culture turnaround can support your organizational growth benchmarks.</p>
         
         <div class="contact-grid">
             <div>
-                <form action="https://formspree.io/f/YOUR_FORMSPREE_ID_HERE" method="POST">
+                <form action="#" method="POST">
                     <div class="form-group">
                         <label>Your Name / Company</label>
-                        <input type="text" name="name" required placeholder="e.g., Jane Doe / TechCorp">
+                        <input type="text" required placeholder="e.g., Enterprise Inc.">
                     </div>
                     <div class="form-group">
                         <label>Corporate Email Address</label>
-                        <input type="email" name="email" required placeholder="name@company.com">
+                        <input type="email" required placeholder="name@company.com">
                     </div>
                     <div class="form-group">
                         <label>Message / Role Overview</label>
-                        <textarea rows="6" name="message" required placeholder="Briefly outline the role requirements, strategic talent initiatives, or team scaling goals you are looking to solve..."></textarea>
+                        <textarea rows="6" required placeholder="Briefly outline the role requirements, strategic talent initiatives, or team scaling goals you are looking to solve..."></textarea>
                     </div>
                     <button type="submit" class="cv-download-btn" style="border: none; padding: 16px 35px; cursor: pointer;">Submit Message</button>
                 </form>
@@ -482,6 +590,7 @@
             </div>
         </div>
     </div>
+
     <script>
         function switchPage(pageId, element) {
             const pages = document.querySelectorAll('.page-content');
