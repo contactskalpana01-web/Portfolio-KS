@@ -656,37 +656,61 @@
         <div class="contact-grid">
             <div>
                 <form action="https://formspree.io/f/xanykgbe" method="POST">
-                    <div class="form-group">
-                        <label for="name">Your Name</label>
-                        <input type="text" id="name" name="name" required placeholder="John Doe">
+                    <div class="form-group" style="margin-bottom: 25px;">
+                        <label for="name" style="display: block; margin-bottom: 12px; font-size: 0.85rem; color: var(--text-secondary); font-weight: 600; letter-spacing: 0.5px;">YOUR NAME</label>
+                        <input type="text" id="name" name="name" required placeholder="John Doe" style="width: 100%; background: #131924; border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 18px; color: var(--white); box-sizing: border-box; font-size: 1rem;">
                     </div>
-                    <div class="form-group">
-                        <label for="email">Email Address</label>
-                        <input type="email" id="email" name="email" required placeholder="john@company.com">
+                    <div class="form-group" style="margin-bottom: 25px;">
+                        <label for="email" style="display: block; margin-bottom: 12px; font-size: 0.85rem; color: var(--text-secondary); font-weight: 600; letter-spacing: 0.5px;">EMAIL ADDRESS</label>
+                        <input type="email" id="email" name="email" required placeholder="john@company.com" style="width: 100%; background: #131924; border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 18px; color: var(--white); box-sizing: border-box; font-size: 1rem;">
                     </div>
-                    <div class="form-group">
-                        <label for="message">Message</label>
-                        <textarea id="message" name="message" rows="6" required placeholder="Let's collaborate on..."></textarea>
+                    <div class="form-group" style="margin-bottom: 30px;">
+                        <label for="message" style="display: block; margin-bottom: 12px; font-size: 0.85rem; color: var(--text-secondary); font-weight: 600; letter-spacing: 0.5px;">MESSAGE</label>
+                        <textarea id="message" name="message" rows="6" required placeholder="Let's collaborate on..." style="width: 100%; background: #131924; border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 18px; color: var(--white); box-sizing: border-box; font-size: 1rem; font-family: inherit; resize: vertical;"></textarea>
                     </div>
-                    <button type="submit" class="cv-download-btn" style="border: none; cursor: pointer; padding: 14px 35px;">Send Message</button>
+                    
+                    <!-- NEW GLOWING GRADIENT BUTTON FROM SCREENSHOT -->
+                    <button type="submit" class="cv-download-btn" style="border: none; cursor: pointer; padding: 16px 36px; font-size: 0.9rem; font-weight: 700; border-radius: 30px; background: linear-gradient(90deg, #38BDF8, #818CF8); color: #0B0F19; box-shadow: 0 10px 25px rgba(56, 189, 248, 0.45); text-transform: uppercase; letter-spacing: 0.5px; transition: transform 0.2s;">
+                        Send Message
+                    </button>
                 </form>
             </div>
             
-            <div style="background: var(--bg-card); padding: 40px; border-radius: 24px; border: 1px solid rgba(255,255,255,0.05); display: flex; flex-direction: column; justify-content: center; gap: 30px;">
+            <!-- RIGHT CARD CONTAINER WITH RESTORED DETAILS -->
+            <div style="background: #121824; padding: 40px 45px; border-radius: 24px; border: 1px solid rgba(255,255,255,0.04); display: flex; flex-direction: column; justify-content: center; gap: 28px; min-height: 380px;">
                 <div>
-                    <h4 style="margin: 0 0 5px 0; color: white; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 1px; color: var(--accent-glow);">Current Location</h4>
-                    <p style="margin: 0; font-size: 1.1rem; font-weight: 600;">Bengaluru, Karnataka, India</p>
+                    <h4 style="margin: 0 0 6px 0; color: #38BDF8; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 1px; font-weight: 700;">CURRENT LOCATION</h4>
+                    <p style="margin: 0; font-size: 1.15rem; font-weight: 700; color: #FFFFFF;">Bengaluru, Karnataka, India</p>
                 </div>
+
+                <!-- RESTORED DIRECT CONTACTS -->
                 <div>
-                    <h4 style="margin: 0 0 5px 0; color: white; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 1px; color: var(--accent-glow);">Professional Networks</h4>
-                    <p style="margin: 10px 0 0 0;">
-                        <a href="https://www.linkedin.com/in/kalpana-sharma-hr" target="_blank" class="btn-secondary" style="padding: 8px 20px; font-size: 0.8rem;">LinkedIn Profile</a>
+                    <h4 style="margin: 0 0 6px 0; color: #38BDF8; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 1px; font-weight: 700;">DIRECT CONTACT</h4>
+                    <p style="margin: 0 0 6px 0; font-size: 1.05rem; font-weight: 600; color: #FFFFFF;">
+                        📧 <a href="mailto:kalpana.sharma0693@gmail.com" style="color: #FFFFFF; text-decoration: none; border-bottom: 1px dashed rgba(255,255,255,0.3);">kalpana.sharma0693@gmail.com</a>
+                    </p>
+                    <p style="margin: 0; font-size: 1.05rem; font-weight: 600; color: #FFFFFF;">
+                        📱 <a href="tel:+919999427181" style="color: #FFFFFF; text-decoration: none;">+91 99994 27181</a>
+                    </p>
+                </div>
+
+                <div>
+                    <h4 style="margin: 0 0 12px 0; color: #38BDF8; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 1px; font-weight: 700;">PROFESSIONAL NETWORKS</h4>
+                    <p style="margin: 0; display: flex; flex-direction: column; gap: 15px; align-items: flex-start;">
+                        <!-- GLOWING OUTLINE LINKEDIN BUTTON FROM SCREENSHOT -->
+                        <a href="https://www.linkedin.com/in/kalpana-sharma-hr" target="_blank" style="display: inline-block; padding: 12px 28px; font-size: 0.85rem; font-weight: 700; color: #38BDF8; border: 2px solid #38BDF8; border-radius: 30px; text-decoration: none; text-transform: uppercase; letter-spacing: 1px; box-shadow: 0 0 15px rgba(56, 189, 248, 0.15); transition: all 0.3s;">
+                            LinkedIn Profile
+                        </a>
+
+                        <!-- CALENDLY/MEETING BUTTON LINK IF APPLICABLE -->
+                        <a href="https://topmate.io/kalpana_sharma" target="_blank" style="display: inline-block; padding: 12px 28px; font-size: 0.85rem; font-weight: 700; color: #818CF8; border: 2px solid #818CF8; border-radius: 30px; text-decoration: none; text-transform: uppercase; letter-spacing: 1px; transition: all 0.3s;">
+                            Book a 1:1 Discussion
+                        </a>
                     </p>
                 </div>
             </div>
         </div>
     </div>
-
     <!-- CORE INTERACTIVE ROUTING JAVASCRIPT -->
     <script>
         function switchPage(pageId, buttonElement) {
