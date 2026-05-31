@@ -937,8 +937,14 @@
             const buttons = document.querySelectorAll('.nav-btn');
             buttons.forEach(btn => btn.classList.remove('active'));
             
+            // FIX: Map the button 'cases' shortcut to your actual HTML element ID
+            let actualId = pageId;
+            if (pageId === 'cases') {
+                actualId = 'case-studies-section';
+            }
+            
             // Activate target subpage
-            const targetPage = document.getElementById(pageId);
+            const targetPage = document.getElementById(actualId);
             if (targetPage) {
                 targetPage.classList.add('active');
             }
