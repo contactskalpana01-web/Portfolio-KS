@@ -367,6 +367,31 @@
                 height: 320px;
             }
         }
+/* Keeps layout side-by-side on desktop/tablet, wraps cleanly on mobile */
+.case-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap; /* Allows wrapping on small mobile screens */
+    gap: 20px;
+    width: 100%;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    padding-bottom: 25px;
+    margin-bottom: 25px;
+}
+
+/* For mobile devices under 600px wide */
+@media (max-width: 600px) {
+    .case-card-header {
+        flex-direction: column; /* Stacks title and badges vertically */
+        gap: 15px;
+    }
+    .case-badges-wrapper {
+        justify-content: flex-start !important; /* Aligns badges left on mobile */
+        width: 100%;
+    }
+}
+        
     </style>
 </head>
 <body>
@@ -648,7 +673,7 @@
 
         <!-- CASE STUDY 1: eNPS & R&R FRAMEWORK -->
         <div style="background: #111827 !important; border: 1px solid rgba(255,255,255,0.05) !important; border-radius: 20px !important; padding: 35px !important; margin-bottom: 40px !important; display: block !important; box-sizing: border-box !important; clear: both !important;">
-            <div style="display: block !important; border-bottom: 1px solid rgba(255,255,255,0.08) !important; padding-bottom: 25px !important; margin-bottom: 25px !important; min-height: 60px !important; clear: both !important;">
+           <!-- <div style="display: block !important; border-bottom: 1px solid rgba(255,255,255,0.08) !important; padding-bottom: 25px !important; margin-bottom: 25px !important; min-height: 60px !important; clear: both !important;">
                 <div style="float: left !important; max-width: 70% !important; box-sizing: border-box !important;">
                     <span style="color: #38BDF8 !important; font-size: 0.8rem !important; font-weight: 700 !important; letter-spacing: 1.5px !important; text-transform: uppercase !important; display: block !important; margin-bottom: 5px !important; font-family: sans-serif !important;">Case Study 01 // Human Capital Strategy // boodmo & The Scalers</span>
                     <h3 style="font-size: 1.8rem !important; font-weight: 700 !important; color: #FFFFFF !important; margin: 0 !important; padding: 0 !important; line-height: 1.3 !important; font-family: sans-serif !important;">Treating Employees as Customers: The eNPS Transformation</h3>
@@ -663,7 +688,28 @@
                         <span style="font-size: 0.65rem !important; color: #8A99AD !important; text-transform: uppercase !important; font-weight: 700 !important; letter-spacing: 0.5px !important; font-family: sans-serif !important;">R&R Framework</span>
                     </div>
                 </div>
-                <div style="clear: both !important;"></div>
+                <div style="clear: both !important;"></div> -->
+            /* new code start*/
+                    <div class="case-card-header">
+            
+            <div style="flex: 1 !important; min-width: 280px !important;">
+                <span style="color: #38BDF8 !important; font-size: 0.8rem !important; font-weight: 700 !important; letter-spacing: 1.5px !important; text-transform: uppercase !important; display: block !important; margin-bottom: 5px !important;">Case Study 01 // Human Capital Strategy // boodmo & The Scalers</span>
+                <h3 style="font-size: 1.8rem !important; font-weight: 700 !important; color: #FFFFFF !important; margin: 0 !important; padding: 0 !important; line-height: 1.3 !important; font-family: sans-serif !important;">Treating Employees as Customers: The eNPS Transformation</h3>
+            </div>
+        
+            <div class="case-badges-wrapper" style="display: flex !important; gap: 10px !important; flex-shrink: 0 !important; align-items: flex-start !important;">
+                <div style="background: rgba(56, 189, 248, 0.04) !important; border: 1px solid rgba(56, 189, 248, 0.15) !important; padding: 10px 22px !important; border-radius: 12px !important; text-align: center !important; min-width: 110px !important; box-sizing: border-box !important;">
+                    <span style="display: block !important; font-size: 1.15rem !important; font-weight: 800 !important; color: #38BDF8 !important;">▲ eNPS</span>
+                    <span style="font-size: 0.65rem !important; color: #8A99AD !important; text-transform: uppercase !important; font-weight: 700 !important; letter-spacing: 0.5px !important; font-family: sans-serif !important;">Scale Lift</span>
+                </div>
+                <div style="background: rgba(129, 140, 248, 0.04) !important; border: 1px solid rgba(129, 140, 248, 0.15) !important; padding: 10px 22px !important; border-radius: 12px !important; text-align: center !important; min-width: 110px !important; box-sizing: border-box !important;">
+                    <span style="display: block !important; font-size: 1.15rem !important; font-weight: 800 !important; color: #818CF8 !important;">Active</span>
+                    <span style="font-size: 0.65rem !important; color: #8A99AD !important; text-transform: uppercase !important; font-weight: 700 !important; letter-spacing: 0.5px !important; font-family: sans-serif !important;">R&R Framework</span>
+                </div>
+            </div>
+        </div>
+            /* new code end*/
+               
             </div>
             
             <div style="display: block !important; margin-bottom: 30px !important; clear: both !important;">
