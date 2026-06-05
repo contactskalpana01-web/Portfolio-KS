@@ -842,94 +842,232 @@
     <!-- CORE INTERACTIVE ROUTING JAVASCRIPT -->
     <script>
         function switchPage(pageId, buttonElement) {
-            // Hide all subpages
             const pages = document.querySelectorAll('.page-content');
             pages.forEach(page => page.classList.remove('active'));
             
-            // Remove active style from all navigation buttons
             const buttons = document.querySelectorAll('.nav-btn');
             buttons.forEach(btn => btn.classList.remove('active'));
             
-            // FIX: Map the button 'cases' shortcut to your actual HTML element ID
             let actualId = pageId;
             if (pageId === 'cases') {
                 actualId = 'case-studies-section';
             }
             
-            // Activate target subpage
             const targetPage = document.getElementById(actualId);
             if (targetPage) {
                 targetPage.classList.add('active');
             }
             
-            // Mark button as active
             if (buttonElement) {
                 buttonElement.classList.add('active');
             }
             
-            // Smooth view snap
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
 
         // ========================================================
-        // CASE STUDY SUBPAGE DATABASE & ROUTER ENGINE
+        // HIGH-FIDELITY CASE STUDY VISUAL DATA PLATFORM ENGINE
         // ========================================================
         const caseStudyData = {
             'boodmo-enps': {
                 tag: '01 // Culture Transformation',
-                title: 'From 35 to 82: The eNPS Transformation',
-                subtitle: 'How employee listening, recognition redesign, and manager engagement increased employee advocacy by 134%.',
-                challenge: 'As the company scaled rapidly, team strain built up and communications grew siloed. Internal baseline engagement surveys flagged down a score of 35, highlighting structural gaps in standard performance recognition loops and growth visibility.',
-                approach: 'Completely overhauled the quarterly Recognition & Rewards (R&R) track to build transparent peer nomination loops. We removed legacy operational ambiguities, shared specific reward data publicly, and matched skill targets directly to employee upskilling programs.',
-                impact: 'Stabilized workforce confidence, eliminated friction parameters within inter-department pathways, and turned employee advocacy up to an all-time high score of 82.'
+                title: 'eNPS Transformation @ boodmo',
+                subtitle: 'How we increased employee advocacy from 35 to 82 by redesigning recognition, feedback, and employee experience.',
+                themeColor: '#10B981',
+                meta: { org: 'boodmo.com', size: '200+ Employees', duration: 'Dec 2021 - Jun 2024', role: 'Assistant Manager - HR' },
+                metrics: [
+                    { val: '35 → 82', label: 'eNPS Score Increase' },
+                    { val: '40+', label: 'Engagement Initiatives' },
+                    { val: '95.66%', label: 'Training Effectiveness' },
+                    { val: '10+', label: 'Customised Rewards & Recognition' }
+                ],
+                // SVG Line Graph matching Image 1 top-left
+                infographicHTML: `
+                    <div style="background: rgba(16, 185, 129, 0.02); border: 1px solid rgba(16, 185, 129, 0.1); padding: 24px; border-radius: 12px; text-align: center; margin-bottom: 30px;">
+                        <h4 style="color: #FFF; margin: 0 0 15px 0; font-size: 0.95rem; text-transform: uppercase; letter-spacing: 0.5px;">eNPS Trend Line (Over Time)</h4>
+                        <svg viewBox="0 0 500 150" style="width: 100%; max-width: 450px; height: auto; overflow: visible;">
+                            <path d="M 50 110 L 150 95 L 250 70 L 350 45 L 450 25" fill="none" stroke="#10B981" stroke-width="4" stroke-linecap="round" />
+                            <circle cx="50" cy="110" r="6" fill="#EF4444" />
+                            <text x="50" y="130" fill="#EF4444" font-size="12" font-weight="bold" text-anchor="middle">35 (Jan '22)</text>
+                            <circle cx="450" cy="25" r="6" fill="#10B981" />
+                            <text x="450" y="15" fill="#10B981" font-size="12" font-weight="bold" text-anchor="middle">82 (Jun '24)</text>
+                            <path d="M 50 110 L 450 110" stroke="rgba(255,255,255,0.1)" stroke-dasharray="4" />
+                        </svg>
+                    </div>
+                `,
+                challenges: ['Inconsistent recognition across internal teams.', 'Limited feedback loop & listening mechanisms.', 'Lack of explicit career growth visibility across matrix paths.'],
+                approach: [
+                    { step: '01 / DIAGNOSE', desc: 'Ran comprehensive eNPS analytics & baseline organizational sentiment audits.' },
+                    { step: '02 / DESIGN', desc: 'Overhauled peer-to-peer nomination criteria & structured continuous feedback cadence.' },
+                    { step: '03 / EXECUTE', desc: 'Launched 38+ culture initiatives backed by immediate reward public dashboards.' }
+                ],
+                impacts: ['Stabilized employee advocacy up to an all-time high tracking baseline score of 82.', 'Eliminated workflow communication friction pathways across departmental engineering channels.'],
+                tools: ['Recognition Frameworks', 'eNPS Analytics Loops', 'R&R Dashboards', 'Quarterly Action Matrices']
             },
-            'scalers-happiness': {
+            'The Scalers-happiness': {
                 tag: '02 // Employee Experience',
-                title: 'Designing a 95% Happiness Workplace at The Scalers',
-                subtitle: 'How employee experience programs, manager connects, and recognition initiatives sustained a 95% happiness score across distributed teams.',
-                challenge: 'Distributed engineering resources serving complex global lines felt professional isolation, creating baseline culture preservation risks across split regions.',
-                approach: 'Launched targeted 15/30/60 day engagement communication loops, integrated regional managers directly into structural career checkups, and engineered borderless cross-culture team initiatives.',
-                impact: 'Sustained an execution baseline score of 95% across EMEA, APAC, and Americas stakeholders.'
+                title: 'Building a Happiness-First Culture @ The Scalers',
+                subtitle: 'How we maintained 95% overall happiness score through people-centric programs, global engagement, and a culture of recognition.',
+                themeColor: '#38BDF8',
+                meta: { org: 'The Scalers', size: '200+ Employees', duration: 'Oct 2024 - Present', role: 'Strategic HR Partner' },
+                metrics: [
+                    { val: '95%', label: 'Overall Happiness' },
+                    { val: '15/30/60', label: 'Structured Connects' },
+                    { val: '38+', label: 'Engagement Initiatives' },
+                    { val: 'Global', label: 'EMEA, APAC, Americas' }
+                ],
+                // Center-Spoke Ring Infographic matching Image 2 top-center
+                infographicHTML: `
+                    <div style="background: rgba(56, 189, 248, 0.02); border: 1px solid rgba(56, 189, 248, 0.1); padding: 24px; border-radius: 12px; text-align: center; margin-bottom: 30px;">
+                        <h4 style="color: #FFF; margin: 0 0 20px 0; font-size: 0.95rem; text-transform: uppercase; letter-spacing: 0.5px;">Employee Experience Architecture</h4>
+                        <div style="position: relative; width: 200px; height: 200px; margin: 0 auto;">
+                            <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); width: 90px; height: 90px; background: #0B0F19; border: 4px solid #38BDF8; border-radius: 50%; display: flex; flex-direction: column; justify-content: center; align-items: center; z-index: 2;">
+                                <span style="font-size: 1.5rem; font-weight: 800; color: #FFF;">95%</span>
+                                <span style="font-size: 0.55rem; color: #38BDF8; font-weight: 700; text-transform: uppercase;">Sustained</span>
+                            </div>
+                            <div style="position: absolute; top: 0; left: 50%; transform: translateX(-50%); font-size: 0.75rem; background: rgba(255,255,255,0.05); padding: 4px 8px; border-radius: 4px; color: #E2E8F0; border: 1px solid rgba(255,255,255,0.1);">Manager Connects</div>
+                            <div style="position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); font-size: 0.75rem; background: rgba(255,255,255,0.05); padding: 4px 8px; border-radius: 4px; color: #E2E8F0; border: 1px solid rgba(255,255,255,0.1);">Onboarding Excellence</div>
+                            <div style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 0.75rem; background: rgba(255,255,255,0.05); padding: 4px 8px; border-radius: 4px; color: #E2E8F0; border: 1px solid rgba(255,255,255,0.1);">Global Workstations</div>
+                            <div style="position: absolute; right: 0; top: 50%; transform: translateY(-50%); font-size: 0.75rem; background: rgba(255,255,255,0.05); padding: 4px 8px; border-radius: 4px; color: #E2E8F0; border: 1px solid rgba(255,255,255,0.1);">Recognition Channels</div>
+                            <svg style="position: absolute; top:0; left:0; width:100%; height:100%; z-index:1;"><circle cx="100" cy="100" r="70" fill="none" stroke="rgba(56, 189, 248, 0.15)" stroke-width="2" stroke-dasharray="4"/></svg>
+                        </div>
+                    </div>
+                `,
+                challenges: ['Distributed offshore engineering resources feeling professional workflow isolation.', 'Preserving organic baseline organizational culture across matrix borders.'],
+                approach: [
+                    { step: '01 / LISTEN', desc: 'Introduced 15/30/60 day continuous pulse check parameters.' },
+                    { step: '02 / ENGAGE', desc: 'Designed targeted regional manager alignment tracks and cross-culture events.' },
+                    { step: '03 / SUSTAIN', desc: 'Rolled out borderless spot reward systems to reinforce immediate alignment values.' }
+                ],
+                impacts: ['Maintained consistent 95% happiness tracking benchmarks across core scaling periods.', 'Drastically lowered attrition risks within key high-demand technical teams.'],
+                tools: ['Pulse Surveys', 'Employee Connect Frameworks', 'Global Engagement Playbooks', 'Recognition Programs']
             },
             'boodmo-managers': {
-                tag: '03 // Leadership Capability',
-                title: 'Building Better Managers at boodmo.com',
-                subtitle: 'How leadership capability programs improved hiring quality, feedback culture, and team effectiveness.',
-                challenge: 'Fast organizational shifts left emerging step-up team managers running without standard corporate leadership templates or unified capability alignments.',
-                approach: 'Developed continuous structural feedback tracks and designed clear management transition programs mapping hiring excellence and active upskilling targets.',
-                impact: 'Delivered an effectiveness score baseline of 95.66%, building a continuous internal management talent pipeline.'
+                tag: '03 // Manager Capability Transformation',
+                title: 'Building Better Managers @ boodmo.com',
+                subtitle: 'How we strengthened manager capabilities in hiring, feedback, and team development—leading to better teams and stronger business outcomes.',
+                themeColor: '#818CF8',
+                meta: { org: 'boodmo.com', size: '50-300+ Employees', duration: 'Jun 2022 - Present', role: 'Lead - HRBP & L&D' },
+                metrics: [
+                    { val: '98%', label: 'Hiring Improvement' },
+                    { val: '95.66%', label: 'Training Effectiveness' },
+                    { val: '100+', label: 'Managers Trained' },
+                    { val: 'Stronger', label: 'Team Outcomes' }
+                ],
+                // Success Triangle Pyramid matching Image 3 top-right
+                infographicHTML: `
+                    <div style="background: rgba(129, 140, 248, 0.02); border: 1px solid rgba(129, 140, 248, 0.1); padding: 24px; border-radius: 12px; text-align: center; margin-bottom: 30px;">
+                        <h4 style="color: #FFF; margin: 0 0 15px 0; font-size: 0.95rem; text-transform: uppercase; letter-spacing: 0.5px;">Leadership Hierarchy Development</h4>
+                        <svg viewBox="0 0 300 160" style="width: 100%; max-width: 320px; height: auto; margin: 0 auto;">
+                            <polygon points="150,10 50,150 250,150" fill="none" stroke="#818CF8" stroke-width="2"/>
+                            <line x1="85" y1="100" x2="215" y2="100" stroke="rgba(255,255,255,0.15)" stroke-width="2"/>
+                            <line x1="115" y1="50" x2="185" y2="50" stroke="rgba(255,255,255,0.15)" stroke-width="2"/>
+                            <text x="150" y="40" fill="#FFF" font-size="10" font-weight="bold" text-anchor="middle">Strategic Leadership</text>
+                            <text x="150" y="85" fill="#818CF8" font-size="10" font-weight="bold" text-anchor="middle">People Management</text>
+                            <text x="150" y="130" fill="#9CA3AF" font-size="10" font-weight="bold" text-anchor="middle">Individual Calibration</text>
+                        </svg>
+                    </div>
+                `,
+                challenges: ['Fast operational scaling leaving step-up managers running without clear guidance.', 'Varying manager frameworks affecting performance reviews and team stability.'],
+                approach: [
+                    { step: '01 / CALIBRATE', desc: 'Mapped core manager functional requirements across interview assessment setups.' },
+                    { step: '02 / EQUIP', desc: 'Launched structured 360 feedback training tracks & transition programs.' },
+                    { step: '03 / MEASURE', desc: 'Sustained strict post-training execution surveys to measure operational improvement.' }
+                ],
+                impacts: ['Secured a 95.66% training efficacy index baseline score across 12+ separate leadership modules.', 'Established a clear internal team promotions pipeline.'],
+                tools: ['Management Playbooks', 'Hiring Frameworks', 'Continuous Feedback Formats', 'Performance Maps']
             },
             'hire-quality': {
                 tag: '04 // Talent Acquisition',
-                title: 'Improving Quality of Hire by 98%',
-                subtitle: 'How workforce planning, structured interviews, and hiring manager enablement improved hiring outcomes.',
-                challenge: 'Hiring metrics faced misaligned pipeline specifications, impacting time-to-fill targets and core team scaling patterns.',
-                approach: 'Re-engineered screening assessment structures, standardized data metrics for interview sheets, and launched intensive calibration loops for hiring managers.',
-                impact: 'Optimized talent lifecycle stability, reporting a 98% quality metric lift and drop in overall time-to-fill intervals.'
+                title: 'Quality of Hire Transformation',
+                subtitle: 'How we improved quality of hire by 98% through workforce planning, hiring process redesign, and data-driven decision making.',
+                themeColor: '#F59E0B',
+                meta: { org: 'Multiple Businesses', size: '50-200+ Employees', duration: 'Varies', role: 'Lead - Talent Acquisition' },
+                metrics: [
+                    { val: '98%', label: 'Quality Index Boost' },
+                    { val: '100%', label: 'Onboarding Feedback' },
+                    { val: 'Reduced', label: 'Overall Time to Fill' },
+                    { val: 'High', label: 'Offer Acceptance' }
+                ],
+                // Recruitment Funnel Visual matching Image 4 top-left
+                infographicHTML: `
+                    <div style="background: rgba(245, 158, 11, 0.02); border: 1px solid rgba(245, 158, 11, 0.1); padding: 24px; border-radius: 12px; text-align: center; margin-bottom: 30px;">
+                        <h4 style="color: #FFF; margin: 0 0 15px 0; font-size: 0.95rem; text-transform: uppercase; letter-spacing: 0.5px;">Optimized Candidate Funnel</h4>
+                        <div style="display: flex; flex-direction: column; align-items: center; gap: 6px;">
+                            <div style="background: rgba(245,158,11,0.4); width: 220px; padding: 6px; border-radius: 4px; font-size: 0.8rem; font-weight: bold;">Workforce Sourcing Core</div>
+                            <div style="background: rgba(245,158,11,0.3); width: 170px; padding: 6px; border-radius: 4px; font-size: 0.8rem; font-weight: bold;">Standardized Screening</div>
+                            <div style="background: rgba(245,158,11,0.2); width: 120px; padding: 6px; border-radius: 4px; font-size: 0.8rem; font-weight: bold;">Hiring Calibration</div>
+                            <div style="background: #F59E0B; color: #0B0F19; width: 80px; padding: 6px; border-radius: 4px; font-size: 0.8rem; font-weight: bold;">98% Top Hire</div>
+                        </div>
+                    </div>
+                `,
+                challenges: ['Misaligned pipeline specifications dragging down core business time-to-fill targets.', 'Lack of data patterns during standard technical evaluation interviews.'],
+                approach: [
+                    { step: '01 / ALIGN', desc: 'Built multi-tier screening frameworks tied to department resource plans.' },
+                    { step: '02 / INTEGRATE', desc: 'Introduced interview sheets calibrated for precise performance indicators.' },
+                    { step: '03 / CALIBRATE', desc: 'Conducted hiring manager enablement sessions to align skill standards.' }
+                ],
+                impacts: ['Boosted quality-of-hire indexes up to a 98% satisfaction baseline.', 'Optimized hiring timelines without lowering engineering standard benchmarks.'],
+                tools: ['Scorecards', 'Sourcing Architecture', 'Manager Calibration Loops', 'Data Analytics Tracking']
             },
             'learning-culture': {
                 tag: '05 // Learning & Development',
-                title: 'Building a Learning Culture That Sticks',
-                subtitle: 'How skill-gap analysis and structured learning journeys improved capability building and business readiness.',
-                challenge: 'Uncoordinated skills upskilling models impacted direct resource training utility and core performance application.',
-                approach: 'Implemented cross-organization skill-gap tracking frameworks and introduced unified career roadmap curricula matching live operational data requirements.',
-                impact: 'Secured an 85% continuous participation metric rate across 6 major technical and organizational competency segments.'
+                title: 'Learning Culture & Capability Building',
+                subtitle: 'How skill-gap analysis and structured learning journeys created a continuous learning culture and built future-ready capabilities.',
+                themeColor: '#EC4899',
+                meta: { org: 'Strategic Enterprise Units', size: '30-300+ Employees', duration: 'Varies', role: 'L&D Strategist' },
+                metrics: [
+                    { val: '95.66%', label: 'Training Efficacy' },
+                    { val: 'Multiple', label: 'Learning Tracks' },
+                    { val: 'High', label: 'Participation Rate' },
+                    { val: 'Aligned', label: 'Business Goals' }
+                ],
+                // Loop Flywheel Cycle matching Image 5 bottom-center
+                infographicHTML: `
+                    <div style="background: rgba(236, 72, 153, 0.02); border: 1px solid rgba(236, 72, 153, 0.1); padding: 24px; border-radius: 12px; text-align: center; margin-bottom: 30px;">
+                        <h4 style="color: #FFF; margin: 0 0 15px 0; font-size: 0.95rem; text-transform: uppercase; letter-spacing: 0.5px;">The L&D Continuous Loop</h4>
+                        <div style="display: flex; justify-content: center; align-items: center; gap: 15px; flex-wrap: wrap;">
+                            <span style="border: 1px solid #EC4899; padding: 6px 12px; border-radius: 20px; font-size: 0.75rem; font-weight:bold;">Skill Mapping</span>
+                            <span style="color: #EC4899;">➔</span>
+                            <span style="border: 1px solid #EC4899; padding: 6px 12px; border-radius: 20px; font-size: 0.75rem; font-weight:bold;">Targeted Training</span>
+                            <span style="color: #EC4899;">➔</span>
+                            <span style="border: 1px solid #EC4899; padding: 6px 12px; border-radius: 20px; font-size: 0.75rem; font-weight:bold;">Impact Review</span>
+                        </div>
+                    </div>
+                `,
+                challenges: ['Disjointed skills development programs causing low training utility.', 'Low active adoption patterns inside non-technical teams.'],
+                approach: [
+                    { step: '01 / AUDIT', desc: 'Conducted skill-gap mapping across internal operations.' },
+                    { step: '02 / DEVELOP', desc: 'Designed targeted paths linking technical benchmarks directly to role roadmaps.' },
+                    { step: '03 / MONITOR', desc: 'Introduced manager validation layers to track on-the-job application.' }
+                ],
+                impacts: ['Secured a sustained 85% continuous participation metric across technical competencies.', 'Significantly increased business readiness index tracking.'],
+                tools: ['Skill Matrices', 'Curriculum Architecture', 'Efficacy Trackers', 'Feedback Loops']
             },
             'people-ops': {
                 tag: '06 // Scale & Infrastructure',
-                title: 'Building Scalable People Operations',
-                subtitle: 'How HR systems, policies, onboarding, and analytics created a strong foundation for growth.',
-                challenge: 'Rapid workforce growth required institutional frameworks to secure compliance rules and clean global operational steps.',
-                approach: 'Built 30+ core operational policies, mapped 25+ distinct SOP structural layers, and introduced cloud automations into standard onboarding procedures.',
-                impact: 'Achieved 100% compliance adherence benchmarks while scaling operational capability layers seamlessly.'
-            },
-            'crisis-management': {
-                tag: '07 // Crisis Management & Resilience',
-                title: 'Leading People Through Crisis',
-                subtitle: 'How proactive communication, employee wellbeing initiatives, and leadership support helped maintain workforce resilience during the uncertainty of the COVID-19 pandemic.',
-                challenge: 'The emergence of the COVID-19 environment created significant health tracking and continuity problems across broad frontline healthcare, retail, and manufacturing operations.',
-                approach: 'Configured round-the-clock employee safety channels, introduced scalable mental wellbeing support systems, and deployed operational business continuity policies for field managers.',
-                impact: 'Protected 400+ onsite and remote assets without encountering critical service interruptions or loss of operations.'
+                title: 'Building HR Foundations for Scalable Growth',
+                subtitle: 'How I built scalable HR systems, policies, processes, and analytics for a high-growth technology company.',
+                themeColor: '#A78BFA',
+                meta: { org: 'Technology Core Units', size: '50-300+ Employees', duration: 'Varies', role: 'Head - HR Infrastructure' },
+                metrics: [
+                    { val: '30+', label: 'Core Policies Built' },
+                    { val: '100+', label: 'Processes Documented' },
+                    { val: '100%', label: 'Compliance Index' },
+                    { val: 'Scalable', label: 'Infrastructure' }
+                ],
+                // Modular Architecture Blocks matching Image 6 bottom-right
+                infographicHTML: `
+                    <div style="background: rgba(167, 139, 250, 0.02); border: 1px solid rgba(167, 139, 250, 0.1); padding: 24px; border-radius: 12px; text-align: center; margin-bottom: 30px;">
+                        <h4 style="color: #FFF; margin: 0 0 15px 0; font-size: 0.95rem; text-transform: uppercase; letter-spacing: 0.5px;">Scalable HR Architecture Layers</h4>
+                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(110px, 1fr)); gap: 10px;">
+                            <div style="background: rgba(167,139,250,0.1); padding: 10px; border-radius: 6px; font-size: 0.75rem; font-weight:bold; border: 1px solid rgba(167,139,250,0.3);">30+ Core Policies</div>
+                            <div style="background: rgba(167,139,250,0.1); padding: 10px; border-radius: 6px; font-size: 0.75rem; font-weight:bold; border: 1px solid rgba(167,139,250,0.3);">25+ SOP Formats</div>
+                            <div style="background: rgba(167,139,250,0.1); padding: 10px; border-radius: 6px; font-size: 0.75rem; font-weight:bold; border: 1px solid rgba(167,139,250,0.3);">Cloud Onboarding</div>
+                            <div style="background: rgba(167,139,250,0.1); padding: 10px; border-radius: 6px; font-size: 0.75rem; font-weight:bold; border: 1px solid rgba(167,139,250,0.3);">Data Analytics</div>
+                        </div>
+                    </div>
+                `
             }
         };
 
@@ -939,57 +1077,119 @@
 
             document.getElementById('modalMetaTag').innerText = data.tag;
             
-            let htmlContent = `
-                <span style="color: #38BDF8; font-size: 0.9rem; font-weight:700; text-transform:uppercase; display:block; margin-bottom:8px;">${data.tag}</span>
-                <h1 style="color:#FFF; font-size: 2.2rem; margin:0 0 15px 0; font-weight:800; line-height:1.2;">${data.title}</h1>
-                <p style="color:#9CA3AF; font-size:1.2rem; line-height:1.6; margin:0 0 40px 0; font-weight:500;">${data.subtitle}</p>
+            // Build Quick Stats Row
+            let statsHtml = `<div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap:15px; margin: 20px 0 30px 0;">`;
+            data.metrics.forEach(m => {
+                statsHtml += `
+                    <div style="background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.05); padding: 15px; border-radius: 8px; text-align: center;">
+                        <span style="display: block; font-size: 1.8rem; font-weight: 800; color: ${data.themeColor}; line-height:1.1;">${m.val}</span>
+                        <span style="display: block; font-size: 0.7rem; color: #9CA3AF; text-transform: uppercase; margin-top: 5px; font-weight: 600; letter-spacing:0.3px;">${m.label}</span>
+                    </div>
+                `;
+            });
+            statsHtml += `</div>`;
+
+            // Build Challenge List Items
+            let challengesHtml = '';
+            data.challenges.forEach(c => {
+                challengesHtml += `<li style="margin-bottom: 8px; font-size: 1.05rem; color:#9CA3AF;"><strong style="color:#EF4444; margin-right:6px;">•</strong> ${c}</li>`;
+            });
+
+            // Build Roadmap Timeline Nodes
+            let roadmapHtml = `<div style="display: flex; flex-direction: column; gap: 16px; position: relative; padding-left: 20px; border-left: 2px solid rgba(255,255,255,0.05);">`;
+            data.approach.forEach(step => {
+                roadmapHtml += `
+                    <div style="position: relative;">
+                        <div style="position: absolute; left: -26px; top: 2px; width: 10px; height: 10px; background: ${data.themeColor}; border-radius: 50%; box-shadow: 0 0 8px ${data.themeColor};"></div>
+                        <span style="display:block; font-size:0.75rem; color:${data.themeColor}; font-weight:800; text-transform:uppercase; letter-spacing:0.5px;">${step.step}</span>
+                        <p style="color:#9CA3AF; margin:4px 0 0 0; font-size:1.05rem; line-height:1.5;">${step.desc}</p>
+                    </div>
+                `;
+            });
+            roadmapHtml += `</div>`;
+
+            // Build Tools Badges
+            let toolsHtml = '';
+            data.tools.forEach(t => {
+                toolsHtml += `<span style="background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); padding: 6px 14px; border-radius: 20px; font-size: 0.8rem; font-weight: 600; color:#E2E8F0; white-space:nowrap;">${t}</span>`;
+            });
+
+            // Assemble Master Panel Canvas Layout View
+            let masterViewHTML = `
+                <span style="color: ${data.themeColor}; font-size: 0.85rem; font-weight:700; text-transform:uppercase; display:block; margin-bottom:6px; letter-spacing:1px;">${data.tag}</span>
+                <h1 style="color:#FFF; font-size: 2.4rem; margin:0 0 10px 0; font-weight:800; line-height:1.1;">${data.title}</h1>
+                <p style="color:#9CA3AF; font-size:1.15rem; line-height:1.5; margin:0 0 25px 0;">${data.subtitle}</p>
                 
-                <div style="display:grid; grid-template-columns: 1fr; gap:35px; margin-top:20px;">
-                    <div style="background:rgba(239,68,68,0.02); border:1px solid rgba(239,68,68,0.08); padding:30px; border-radius:12px;">
-                        <h3 style="color:#EF4444; margin:0 0 12px 0; font-size:1.2rem; font-weight:700;">🚨 The Challenge</h3>
-                        <p style="color:#9CA3AF; line-height:1.7; font-size:1.05rem; margin:0;">${data.challenge}</p>
+                <!-- METADATA INFORMATION BAR -->
+                <div style="display:flex; flex-wrap:wrap; gap:20px; padding:12px 20px; background:rgba(255,255,255,0.01); border: 1px solid rgba(255,255,255,0.04); border-radius:8px; margin-bottom:30px; font-size:0.85rem; color:#9CA3AF;">
+                    <div><span style="color:#6B7280; font-weight:600; margin-right:4px;">Organization:</span> <span style="color:#FFF; font-weight:600;">${data.meta.org}</span></div>
+                    <div><span style="color:#6B7280; font-weight:600; margin-right:4px;">Team Size:</span> <span style="color:#FFF; font-weight:600;">${data.meta.size}</span></div>
+                    <div><span style="color:#6B7280; font-weight:600; margin-right:4px;">Duration:</span> <span style="color:#FFF; font-weight:600;">${data.meta.duration}</span></div>
+                    <div><span style="color:#6B7280; font-weight:600; margin-right:4px;">My Role:</span> <span style="color:${data.themeColor}; font-weight:700;">${data.meta.role}</span></div>
+                </div>
+
+                ${statsHtml}
+
+                <!-- TOP TWO-COLUMN LAYOUT PANEL GRID -->
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; margin-bottom: 35px; align-items: start;">
+                    <div>
+                        <h3 style="color:#EF4444; font-size:1.15rem; font-weight:700; margin:0 0 15px 0; display:flex; align-items:center; gap:8px;">🚨 THE CHALLENGE</h3>
+                        <ul style="list-style:none; padding:0; margin:0;">${challengesHtml}</ul>
                     </div>
-                    
-                    <div style="background:rgba(56,189,248,0.02); border:1px solid rgba(56,189,248,0.08); padding:30px; border-radius:12px;">
-                        <h3 style="color:#38BDF8; margin:0 0 12px 0; font-size:1.2rem; font-weight:700;">🛠️ The Strategy & Execution</h3>
-                        <p style="color:#9CA3AF; line-height:1.7; font-size:1.05rem; margin:0;">${data.approach}</p>
+                    <div>
+                        ${data.infographicHTML}
                     </div>
-                    
-                    <div style="background:rgba(16,185,129,0.02); border:1px solid rgba(16,185,129,0.08); padding:30px; border-radius:12px; border-left:4px solid #10B981;">
-                        <h3 style="color:#10B981; margin:0 0 8px 0; font-size:1.2rem; font-weight:700;">📈 Verified Organizational Impact</h3>
-                        <p style="color:#E2E8F0; line-height:1.7; font-size:1.05rem; margin:0;">${data.impact}</p>
-                    </div>
+                </div>
+
+                <!-- STRATEGY & ROADMAP BLOCK -->
+                <div style="background: rgba(255,255,255,0.01); border: 1px solid rgba(255,255,255,0.04); padding: 30px; border-radius: 12px; margin-bottom: 35px;">
+                    <h3 style="color:${data.themeColor}; font-size:1.15rem; font-weight:700; margin:0 0 20px 0; display:flex; align-items:center; gap:8px;">🛠️ MY APPROACH & STRATEGY</h3>
+                    ${roadmapHtml}
+                </div>
+
+                <!-- VERIFIED ORGANIZATIONAL IMPACT -->
+                <div style="background: rgba(16, 185, 129, 0.02); border: 1px solid rgba(16, 185, 129, 0.1); border-left: 4px solid #10B981; padding: 25px; border-radius: 12px; margin-bottom: 35px;">
+                    <h3 style="color:#10B981; font-size:1.15rem; font-weight:700; margin:0 0 10px 0; display:flex; align-items:center; gap:8px;">📈 VERIFIED ORGANIZATIONAL IMPACT</h3>
+                    <p style="color:#E2E8F0; font-size:1.05rem; line-height:1.6; margin:0;">${data.impacts.join(' ')}</p>
+                </div>
+
+                <!-- TOOLS & FRAMEWORKS FOOTER BADGES -->
+                <div>
+                    <h4 style="color:#6B7280; font-size:0.75rem; font-weight:700; text-transform:uppercase; letter-spacing:0.5px; margin:0 0 12px 0;">Tools, Systems & Frameworks Utilized</h4>
+                    <div style="display:flex; flex-wrap:wrap; gap:10px;">${toolsHtml}</div>
                 </div>
             `;
             
-            document.getElementById('modalMainContentArea').innerHTML = htmlContent;
+            document.getElementById('modalMainContentArea').innerHTML = masterViewHTML;
             
             const overlay = document.getElementById('caseStudyOverlayWindow');
-            overlay.style.display = 'block';
+            overlay.style.setProperty('display', 'block', 'important');
             document.body.style.overflow = 'hidden';
         }
 
         function closeCaseStudy() {
-            document.getElementById('caseStudyOverlayWindow').style.display = 'none';
+            const overlay = document.getElementById('caseStudyOverlayWindow');
+            overlay.style.setProperty('display', 'none', 'important');
             document.body.style.overflow = 'auto';
         }
     </script>
 
-    <div id="caseStudyOverlayWindow" style="display: none; position: fixed !important; top: 0 !important; left: 0 !important; width: 100vw !important; height: 100vh !important; background: #0B0F19 !important; z-index: 99999 !important; overflow-y: auto !important; padding: 40px 0; box-sizing: border-box;">
-        <div style="max-width: 900px !important; margin: 0 auto !important; padding: 0 24px !important; box-sizing: border-box; font-family: sans-serif;">
+    <!-- FULLSCREEN MODAL OVERLAY SUBPAGE CONTAINER (HIDDEN BY DEFAULT WITH !IMPORTANT) -->
+    <div id="caseStudyOverlayWindow" style="display: none !important; position: fixed !important; top: 0 !important; left: 0 !important; width: 100vw !important; height: 100vh !important; background: #0B0F19 !important; z-index: 99999 !important; overflow-y: auto !important; padding: 40px 0; box-sizing: border-box;">
+        <div style="max-width: 960px !important; margin: 0 auto !important; padding: 0 24px !important; box-sizing: border-box; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
             
-            <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid rgba(255,255,255,0.08); padding-bottom: 20px; margin-bottom: 35px;">
-                <button onclick="closeCaseStudy()" style="background: none !important; border: none !important; color: #38BDF8 !important; font-size: 1rem !important; font-weight: 700 !important; cursor: pointer !important; display: inline-flex !important; align-items: center !important; gap: 8px !important; padding: 0 !important;">
-                    ← Back to Dashboard Hub
+            <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid rgba(255,255,255,0.06); padding-bottom: 20px; margin-bottom: 30px;">
+                <button onclick="closeCaseStudy()" style="background: none !important; border: none !important; color: #38BDF8 !important; font-size: 0.95rem !important; font-weight: 700 !important; cursor: pointer !important; display: inline-flex !important; align-items: center !important; gap: 8px !important; padding: 0 !important;">
+                    ← Back to Case Studies
                 </button>
-                <span id="modalMetaTag" style="color: #6B7280; font-size: 0.8rem; font-weight: bold; text-transform: uppercase; letter-spacing: 1px;">DEEP DIVE DEBRIEF</span>
+                <span id="modalMetaTag" style="color: #6B7280; font-size: 0.75rem; font-weight: bold; text-transform: uppercase; letter-spacing: 1px;">EXECUTIVE BRIEFING</span>
             </div>
 
             <div id="modalMainContentArea"></div>
 
-            <div style="border-top: 1px solid rgba(255,255,255,0.08); margin-top: 50px; padding-top: 25px; text-align: center;">
-                <button onclick="closeCaseStudy()" style="background: #38BDF8 !important; color: #0B0F19 !important; border: none !important; padding: 12px 30px !important; border-radius: 8px !important; font-weight: 700 !important; cursor: pointer !important;">
-                    Close & Return To Main Hub
+            <div style="border-top: 1px solid rgba(255,255,255,0.06); margin-top: 50px; padding-top: 25px; text-align: center;">
+                <button onclick="closeCaseStudy()" style="background: #38BDF8 !important; color: #0B0F19 !important; border: none !important; padding: 12px 35px !important; border-radius: 8px !important; font-weight: 700 !important; cursor: pointer !important; font-size:0.95rem;">
+                    Close Briefing & Return
                 </button>
             </div>
         </div>
